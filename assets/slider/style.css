@@ -1,0 +1,34 @@
+
+#slider { position:relative; float:left; width:100%; }
+#slider div.base { float:left; width:100%; opacity:0; filter:alpha(opacity=0); }
+#slider div.slide { position:absolute; top:0; right:0; width:100%; }
+#slider div.slide img, #slider div.base img { float:right; width:100%; }
+#slider div.slide img.mask { position:absolute; top:0; right:0; }
+
+
+#slider a.caption { }
+
+#slider ul.tabs { position:absolute; bottom:10px; left:50%; width:100px; margin-left:-50px; }
+#slider ul.tabs li { float:left; width:10px; height:10px; margin-right:5px; border:solid 3px #FFF;  cursor:pointer; }
+#slider ul.tabs li.current { background-color:#669966; }
+
+
+#slider a.caption {
+    position: absolute;
+    padding: 15px 8px 8px 8px; 
+    right: 0%;
+    width: 33%;
+    color: #FFF;
+    font-size: 1em;
+    color:#94004B;
+    background-color: #FFF; 
+    transition: all .7s;
+}
+
+
+a.caption span{ display: block;}
+a.caption span.cabtitul{  font-family: 'latoregular', Arial, sans-serif;color:#5A012E; font-size: 1.6em;/*padding: 0 10px 0 5px*/}
+a.caption span.leer{font-family: 'latoregular', Arial, sans-serif;font-size: 1.4em;color:#70B10C;/*padding: 0px 10px 20px 5px*/}
+#slider a.caption{cursor: pointer; height: 65px; display: block;}
+#slider a.caption:hover{background-color: #94004B;}
+#slider a.caption:hover span, #slider a.caption:hover i{color: white;}

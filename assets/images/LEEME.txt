@@ -1,0 +1,10 @@
+﻿A esta carpeta pertenece todo archivo con los formatos:
+.jpg, .png, .gif y .svg
+
+NO COLOCAR LOS ARCHIVOS SUELTOS, SINO ORGANIZARLOS POR CARPETAS.
+POR EJEMPLO:
+- iconos
+- fondos
+- home
+- galeria
+- contactenos

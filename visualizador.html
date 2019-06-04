@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+   <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="">
+      <title>Colegios Dominicas</title>
+      <script type="text/javascript" src="assets/js/jquery-1.11.3.min.js"></script>
+      <script type="text/javascript" src="assets/js/script.js"></script>
+      <link rel="stylesheet" href="assets/css/font-awesome.css" type="text/css" media="all">
+      <link rel="stylesheet" href="assets/css/grid.css" type="text/css" media="all">
+      <link rel="stylesheet" href="assets/css/style.css" type="text/css" media="all">
+      <link href="assets/slider/style.css" rel="stylesheet" type="text/css" media="all">
+      <!--[if lt IE 9]><script src="https://cdn.jsdelivr.net/html5shiv/3.7.2/html5shiv-printshiv.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/respond/1.4.2/respond.min.js"></script><![endif]-->
+      <!--navegacion url -->
+    <link rel="stylesheet" href="assets/urlnaveg/css/style.css"> 
+    <script src="assets/urlnaveg/js/modernizr.js"></script> 
+   </head>
+   <body>
+      <div class="container header coloruno">
+      <header class="row row-collapse" >
+        <div class="col-xs-11 col-sm-7">
+          <div class="c-logo">
+            <!--<a href="index.html"><img src="assets/images/png/logo-modificado.png" class="logo" /></a>-->
+            <a href="index.html">
+              <img src="assets/images/logos/logo1.png">
+              <hgroup>
+                <h2>Colegio</h2>
+                <h1>SAN MARTIN DE PORRES</h1>
+                <h2>Cusco - Perú</h2>
+              </hgroup>
+            </a>
+          </div>
+        </div>
+        <div class="col-xs-1 col-sm-5 relative menutop">
+           <a href="#" class="menu coloruno"><i class="fa fa-bars" aria-hidden="true"></i></a>
+           <ul class="nav">
+             <li><a href="#">PP.FF</a>
+              <ul>
+                <li><a href="#">Reglamento PP.FF</a></li>
+                <li><a href="#">Comités de Aula</a></li>
+                <li><a href="#">Horarios PP.FF</a></li>
+                <li><a href="#">Comunidades</a></li>
+              </ul>
+            </li>            
+             <li><a href="#">ALUMNOS</a>
+              <ul>
+                <li><a href="#">Consejo Estudiantil</a></li>
+                <li><a href="#">Reglamento del Estudiante</a></li>
+                <li><a href="#">Horarios</a></li>
+                <li><a href="#">Exalumnos</a></li>
+              </ul>
+             </li>
+             <li><a href="#">INTRANET</a></li>
+             <li><a href="#">AULA VIRTUAL</a></li>
+           </ul>
+        </div>   
+        <section class="row"><!--inicio de menu dos-->
+          <div class="enlacmovil movil">
+            <ul>
+              <li><a href="nosotros.html" class="nosm">NOSOTROS</a></li>
+              <li><a href="niveles.html" class="nivm">NIVELES</a></li>
+              <li><a href="#" class="acam">ÁREAS ACADÉMICAS</a></li>
+              <li><a href="#" class="extm">ÁREAS DE EXTENSIÓN</a></li>
+              <li><a href="recursos.html" class="recm">RECURSOS </a></li>
+              <li><a href="agenda.html" class="agem">AGENDA </a></li>
+              <li><a href="talleres.html" class="talm">TALLERES </a></li>
+              <li><a href="#" class="nivm">COLEGIOS </a></li>
+              <li><a href="noticias.html" class="recm">NOTICIAS </a></li>
+              <li><a href="contacto.html" class="vacm">CONTACTO</a></li>
+            </ul>
+          </div>
+        </section><!--fin de menu dos-->     
+      </header>
+    </div>
+      <div id="main" class="container visual">
+        <object class="pdf" data="" type="application/pdf">
+            <embed src="" type="application/pdf" />
+        </object>
+      </div>
+
+      <script type="text/javascript" src="assets/slider/jquery.tools.min.js"></script>
+      <script type="text/javascript" src="assets/slider/main.js"></script>
+      <script type="text/javascript">
+        var url = window.location.href;
+        url = url.split('=');
+
+        $('.pdf').attr('data', url[1]);
+        $('.pdf').find('embed').attr('src', url[1]);
+      </script>
+   </body>
+</html>

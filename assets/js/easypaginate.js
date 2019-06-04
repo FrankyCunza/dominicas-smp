@@ -1,0 +1,134 @@
+/*
+ *  Easy Paginate 1.0 - jQuery plugin
+ *  written by Alen Grakalic    
+ *  http://cssglobe.com/
+ *
+ *  Copyright (c) 2011 Alen Grakalic (http://cssglobe.com)
+ *  Dual licensed under the MIT (MIT-LICENSE.txt)
+ *  and GPL (GPL-LICENSE.txt) licenses.
+ *
+ *  Built for jQuery library
+ *  http://jquery.com
+ *
+ */
+
+(function($) {
+          
+    $.fn.easyPaginate = function(options){
+
+        var defaults = {                
+            step: 4,
+            delay: 100,
+            numeric: true,
+            nextprev: true,
+            auto:false,
+            loop:false,
+            pause:4000,
+            clickstop:true,
+            controls: 'pagination',
+            current: 'active',
+            randomstart: false
+        }; 
+        
+        var options = $.extend(defaults, options); 
+        var step = options.step;
+        var lower, upper;
+        var children = $(this).children();
+        var count = children.length;
+        var obj, next, prev;        
+        var pages = Math.floor(count/step);
+        var page = (options.randomstart) ? Math.floor(Math.random()*pages)+1 : 1;
+        var timeout;
+        var clicked = false;
+        
+        function show(){
+            clearTimeout(timeout);
+            lower = ((page-1) * step);
+            upper = lower+step;
+            $(children).each(function(i){
+                var child = $(this);
+                child.hide();
+                if(i>=lower && i<upper){ setTimeout(function(){ child.fadeIn('fast') }, ( i-( Math.floor(i/step) * step) )*options.delay ); }
+                if(options.nextprev){
+                    if(upper >= count) { next.fadeOut('fast'); } else { next.fadeIn('fast'); };
+                    if(lower >= 1) { prev.fadeIn('fast'); } else { prev.fadeOut('fast'); };
+                };
+            });
+            $('a[data-index]').removeClass(options.current);
+            $('a[data-index="'+page+'"]').addClass(options.current);
+            
+            if(options.auto){
+                if(options.clickstop && clicked){}else{ timeout = setTimeout(auto,options.pause); };
+            };
+        };
+        
+        function auto(){
+            if(options.loop) if(upper >= count){ page=0; show(); }
+            if(upper < count){ page++; show(); }                
+        };
+        
+        this.each(function(){ 
+            
+            obj = this;
+            
+            if(count>step){
+                                
+                if((count/step) > pages) pages++;
+                
+                var ol = $('<p id="'+ options.controls +'"></p>').insertBefore(obj);
+                
+                if(options.numeric){
+                    for (var i = 1; i <= pages; i++) {
+                        if (i == pages) {
+                            $('<a data-index="' + i + '">' + i + '</a>')
+                                .appendTo(ol)
+                                .click(function () {
+                                    clicked = true;
+                                    page = $(this).attr('data-index');
+                                    show();
+                                });
+                        } else {
+                            $('<a data-index="' + i + '">' + i + '</a>')
+                                .appendTo(ol)
+                                .click(function () {
+                                    clicked = true;
+                                    page = $(this).attr('data-index');
+                                    show();
+                                });
+                        }
+                    };              
+                };
+                
+                if(options.nextprev){
+                    prev = $('<a class="prev">Anterior</a>')
+                        .hide()
+                        .appendTo(ol)
+                        .click(function(){
+                            clicked = true;
+                            page--;
+                            show();
+                        });
+                };
+                
+                if(options.nextprev){
+                    next = $('<a class="next">Siguiente</a>')
+                        .hide()
+                        .appendTo(ol)
+                        .click(function(){
+                            clicked = true;         
+                            page++;
+                            show();
+                        });
+                };
+            
+                show();
+            } else if(count == step){
+                $(children).each(function () {
+                    $(this).show();
+                });
+            }
+        });
+        
+    };  
+
+})(jQuery);

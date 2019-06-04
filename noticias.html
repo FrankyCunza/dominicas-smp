@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="">
+      <title>Colegios Dominicas</title>
+      <script type="text/javascript" src="assets/js/jquery-1.11.3.min.js"></script>
+      <script type="text/javascript" src="assets/js/script.js"></script>
+      <link rel="stylesheet" href="assets/css/font-awesome.css" type="text/css" media="all">
+      <link rel="stylesheet" href="assets/css/grid.css" type="text/css" media="all">
+      <link rel="stylesheet" href="assets/css/style.css" type="text/css" media="all">
+      <link href="assets/slider/style.css" rel="stylesheet" type="text/css" media="all">
+      <!--[if lt IE 9]><script src="https://cdn.jsdelivr.net/html5shiv/3.7.2/html5shiv-printshiv.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/respond/1.4.2/respond.min.js"></script><![endif]-->
+      <!--navegacion url -->
+    <link rel="stylesheet" href="assets/urlnaveg/css/style.css"> 
+    <script src="assets/urlnaveg/js/modernizr.js"></script> 
+    <script>
+      $(document).ready(function() {
+        $('.nav-toggle').click(function(){
+          //get collapse content selector
+          var collapse_content_selector = $(this).attr('href');         
+          
+          //make the collapse content to be shown or hide
+          var toggle_switch = $(this);
+          $(collapse_content_selector).toggle(function(){
+            if($(this).css('display')=='none'){
+              toggle_switch.html('Ver Menú<i class="fa fa-chevron-down" aria-hidden="true"></i>');//change the button label to be 'Show'
+            }else{
+              toggle_switch.html('Ocultar Menú<i class="fa fa-chevron-up" aria-hidden="true"></i>');//change the button label to be 'Hide'
+            }
+          });
+        });
+        
+      }); 
+    </script>
+  </head>
+  <body>
+    <div class="container header coloruno">
+      <header class="row row-collapse" >
+        <div class="col-xs-11 col-sm-7">
+          <div class="c-logo">
+            <!--<a href="index.html"><img src="assets/images/png/logo-modificado.png" class="logo" /></a>-->
+            <a href="index.html">
+              <img src="assets/images/logos/logo1.png">
+              <hgroup>
+                <h2>Colegio</h2>
+                <h1>SAN MARTIN DE PORRES</h1>
+                <h2>Cusco - Perú</h2>
+              </hgroup>
+            </a>
+          </div>
+        </div>
+        <div class="col-xs-1 col-sm-5 relative menutop">
+           <a href="#" class="menu coloruno"><i class="fa fa-bars" aria-hidden="true"></i></a>
+           <ul class="nav">
+             <li><a href="#">PP.FF</a>
+              <ul>
+                <li><a href="#">Reglamento PP.FF</a></li>
+                <li><a href="#">Comités de Aula</a></li>
+                <li><a href="#">Horarios PP.FF</a></li>
+                <li><a href="#">Comunidades</a></li>
+              </ul>
+            </li>            
+             <li><a href="#">ALUMNOS</a>
+              <ul>
+                <li><a href="#">Consejo Estudiantil</a></li>
+                <li><a href="#">Reglamento del Estudiante</a></li>
+                <li><a href="#">Horarios</a></li>
+                <li><a href="#">Exalumnos</a></li>
+              </ul>
+             </li>
+             <li><a href="#">INTRANET</a></li>
+             <li><a href="#">AULA VIRTUAL</a></li>
+           </ul>
+        </div>   
+        <section class="row"><!--inicio de menu dos-->
+          <div class="enlacmovil movil">
+            <ul>
+              <li><a href="nosotros.html" class="nosm">NOSOTROS</a></li>
+              <li><a href="niveles.html" class="nivm">NIVELES</a></li>
+              <li><a href="#" class="acam">ÁREAS ACADÉMICAS</a></li>
+              <li><a href="#" class="extm">ÁREAS DE EXTENSIÓN</a></li>
+              <li><a href="recursos.html" class="recm">RECURSOS </a></li>
+              <li><a href="agenda.html" class="agem">AGENDA </a></li>
+              <li><a href="talleres.html" class="talm">TALLERES </a></li>
+              <li><a href="#" class="nivm">COLEGIOS </a></li>
+              <li><a href="noticias.html" class="recm">NOTICIAS </a></li>
+              <li><a href="contacto.html" class="vacm">CONTACTO</a></li>
+            </ul>
+          </div>
+        </section><!--fin de menu dos-->     
+      </header>
+    </div>
+    <div class="container" id="menu-contenedor">
+      <div id="menu" class="row row-collapse">
+        <nav class="col-sm-12 item"> 
+          <ul class="nav">  
+            <li class="btn btn1"><a href="nosotros.html" class="btn1in">NOSOTROS</a>
+                <ul>
+                  <li><a href="nosotros.html">Presentación</a></li>
+                  <li><a href="historia.html">Historia<i class="fa fa-caret-right fa-lg"></i></a>
+                    <ul class="historia">
+                      <li>                        
+                        <span><a href="historia.html#introduccion">Introducción</a></span>
+                        <span><a href="historia.html#directoras">Directoras</a></span>
+                      </li>                                
+                    </ul> 
+                  </li>
+                  <li><a href="misionyvision.html">Misión y Visión</a></li>  
+                  <li><a href="pastoral.html">Pastoral<i class="fa fa-caret-right fa-lg"></i></a>
+                    <ul>
+                      <li>
+                        <span><a href="pastoral.html#objgeneral">Objetivo General</a></span>
+                        <span><a href="pastoral.html#objespecificos">Objetivos Específicos</a></span>
+                        <span><a href="pastoral.html#catequesis">Programa de Catequésis</a></span>
+                        <span><a href="pastoral.html#espiritualidad">Programa de Espiritualidad Familiar</a></span>
+                        <span><a href="pastoral.html#voluntariado">Voluntariado Dominicano</a></span>
+                      </li>
+                    </ul>
+                  </li>                        
+               </ul>
+            </li>
+            <li class="btn btn2"><a href="niveles.html" class="btn2in">NIVELES</a>
+              <ul>
+                <li><a href="niveles.html#pedagogica">Propuesta Pedagógica<i class="fa fa-caret-right fa-lg"></i></a>
+                  <ul>
+                    <li>
+                      <span><a href="niveles.html#primario">Nivel Primario</a></span>
+                      <span><a href="niveles.html#secundario">Nivel Secundario</a></span>
+                      <span><a href="niveles.html#plan">Plan Lector</a></span>                                
+                    </li>                                
+                  </ul> 
+                </li>
+              </ul>    
+            </li>
+            <li class="btn btn3 flexdos"><a href="#" class="btn3in">ÁREAS ACADÉMICAS</a></li>
+            <li class="btn btn4 flexdos"><a href="#" class="btn4in">ÁREAS DE EXTENSIÓN</a></li>
+            <li class="btn btn5"><a href="recursos.html" class="btn5in">RECURSOS </a>
+              <ul>
+                <li><a href="recursos.html-documentos">Documentos</a></li>
+                <li><a href="recursos-fotos.html">Fotos<i class="fa fa-caret-right fa-lg"></i></a>
+                  <ul>
+                    <li>
+                      <span><a href="recursos-fotos.html#campeonato">Campeonato 2016</a></span>
+                      <span><a href="recursos-fotos.html#graduacion">Graduación 2016</a></span>
+                    </li>                                
+                  </ul> 
+                </li>
+                <li><a href="recursos-videos.html">Videos</a></li>
+              </ul>        
+            </li> 
+            <li class="btn btn6"><a href="agenda.html" class="btn6in">AGENDA </a></li>
+            <li class="btn btn7"><a href="talleres.html" class="btn7in">TALLERES</a></li>
+            <li class="btn btn8"><a href="contacto.html" class="btn8in">CONTACTO</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <div id="main" class="container" >        
+      <section class="row">
+        <div class="enlacmovil movil">
+          <ul>
+            <li><a href="nosotros.html" class="nosm">NOSOTROS</a></li>
+            <li><a href="niveles.html" class="nivm">NIVELES</a></li>
+            <li><a href="#" class="acam">ÁREAS ACADÉMICAS</a></li>
+            <li><a href="#" class="extm">ÁREAS DE EXTENSIÓN</a></li>
+            <li><a href="recursos.html" class="recm">RECURSOS </a></li>
+            <li><a href="agenda.html" class="agem">AGENDA </a></li>
+            <li><a href="talleres.html" class="talm">TALLERES </a></li>
+            <li><a href="#" class="nivm">COLEGIOS </a></li>
+            <li><a href="noticias.html" class="recm">NOTICIAS </a></li>
+            <li><a href="contacto.html" class="vacm">CONTACTO</a></li>
+          </ul>
+        </div>
+        <!-- enlaces redes -->
+        <div class="social">
+          <a href="https://www.facebook.com/sanmartin.cusco" target="_blank" title="facebook" class="fac">
+              <i class="fa fa-facebook fa-2x" aria-hidden="true"></i>
+          </a>
+          <a href="#" title="twiter" class="twi">
+              <i class="fa fa-twitter fa-2x" aria-hidden="true"></i>
+          </a>
+          <a href="#" title="youtube">
+              <i class="fa fa-youtube-play fa-2x" aria-hidden="true"></i>
+          </a>
+        </div>
+        <!-- -->
+      </section>
+      <div class="noticias noticias-list interna row">
+        <nav>
+          <ol class="cd-breadcrumb triangle">
+            <li ><a href="#0" >Noticias </a></li>
+            <li class="current"><em>oración de Santo Tomas</em></li>
+          </ol>
+        </nav>
+        <div class="col-sm-12">
+          <h2>NOTICIAS</h2>
+        </div>
+        <div class="col-sm-3">
+          <div>
+            <button href="#collapse1" class="nav-toggle coloruno">Ver Menú<i class="fa fa-chevron-down" aria-hidden="true"></i></button>
+          </div>
+          <div id="collapse1">
+            <div class="new item">
+              <a href="#" class="activ">
+                <div>Oración a Santo Tomas</div>
+                <p>11/ENE/16</p> 
+              </a>              
+            </div>
+            <div class="new item">
+              <a href="#" class="activ">
+                <div>Reunión de comité de 5to de secundaria</div>
+                <p>17/ENE/16</p> 
+              </a>              
+            </div>
+            <div class="new item">
+              <a href="#" class="activ">
+                <div>Misa de Confraternidad por los 22 años de la madre María Elizabeth</div>
+                <p>11/ENE/16</p> 
+              </a>              
+            </div>
+            <a class="ver-news" href="noticias-interno.html">VER NOTICIAS ANTERIORES</a>
+          </div>
+          
+        </div>
+        <div class="col-sm-9">
+          <img src="assets/images/jpg/comunicados.jpg">
+          <div class="new">
+            <h3>Oración de Santo Tomas<span>11/ENE/16</span></h3>
+            <p>Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen.<br><br>Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen.</p>
+            <a href="index.html"><i class="fa fa-caret-left fa-lg"></i>Regresar</a>
+          </div>
+        </div>
+        
+      </div>
+      <div id="mapas" class="row ">
+        <div class="col-sm-4 lugar"  >
+          <div class="logomap" >
+            <img src="assets/images/logos/logo1.png" />
+          </div>
+          <p class="martin">COLEGIO SAN MARTIN DE PORRES</p>
+          <p class="domin">Cusco - Perú</p>
+          <p class="provin">Colegio Dominico</p>
+          <p class="dato"><i class="fa fa-home fa-lg colorunotxt" aria-hidden="true"></i>Calle Ahuacpinta 600, Cusco</p>
+          <p class="dato"><i class="fa fa-phone fa-lg colorunotxt" aria-hidden="true"></i>+51084225484</p>
+          <p class="dato" title="Contacto@sanmartincusco.edu.pe"><i class="fa fa-envelope fa-lg colorunotxt" aria-hidden="true"></i><a href="mailto:Contacto@sanmartincusco.edu.pe">Contacto@sanmartincusco.edu.pe</a></p>
+          <p class="sociales">
+            <a href="https://www.facebook.com/sanmartin.cusco" target="_blank" ><i class="fa fa-facebook fa-lg" aria-hidden="true"></i></a>
+            <a href="#"><i class="fa fa-twitter fa-lg" aria-hidden="true"></i></a>
+            <a href="#"><i class="fa fa-youtube-play fa-lg" aria-hidden="true"></i></a>
+          </p>
+        </div>          
+        <div class="col-sm-8 goomap">
+          <div id="map_canvas"></div>
+          <!--<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1939.6130481712073!2d-71.9749124408717!3d-13.521711737559928!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x916dd60ac7bdd5a1%3A0xee3c6d361fdc3721!2sSan+Martin+de+Porres!5e0!3m2!1ses-419!2spe!4v1460582565691" width="650" height="263" frameborder="0" style="border:0" allowfullscreen></iframe>-->
+        </div>        
+      </div>
+    </div> 
+    <div class="container">
+      <div class="containerfootsitios">
+          <div class="row">
+          <div class="col-sm-12 footsitios">
+            <h1> SITIOS DE INTERES</h1>
+            <ul>
+              <li><a href="http://www.minedu.gob.pe" target="_blank" class="interes">Ministerio de Educación</a></li>
+              <li><a href="http://www.ugelcusco.com" target="_blank"  class="interes">UGEL Cusco</a></li>
+              <li><a href="http://siagie.minedu.gob.pe/inicio/" target="_blank" class="interes">SIAGIE</a></li>
+              <li><a href="http://www.dominicasperu.com.pe/" target="_blank" class="interes">Hermanas DIC en el Perú</a></li>
+              <li><a href="http://www.icdominicas.org/" target="_blank" class="interes">Hermanas DIC</a></li>
+            </ul>
+          </div>
+        </div><!----> 
+      </div>
+    </div>
+    
+    <footer class=" container foot">
+      <!--<div class="row">
+        <div class="col-sm-12 sitios">
+          <h1> SITIOS DE INTERES</h1>
+          <ul>
+            <li><a href="http://www.minedu.gob.pe" target="_blank" class="interes">Ministerio de Educación</a></li>
+            <li><a href="http://www.ugelcusco.com" target="_blank"  class="interes">UGEL Cusco</a></li>
+            <li><a href="http://siagie.minedu.gob.pe/inicio/" target="_blank" class="interes">SIAGIE</a></li>
+            <li><a href="http://www.dominicasperu.com.pe/" target="_blank" class="interes">Hermanas DIC en el Perú</a></li>
+            <li><a href="http://www.icdominicas.org/" target="_blank" class="interes">Hermanas DIC</a></li>
+          </ul>
+        </div>
+      </div>--><!---->
+      <div class=" container-fluid row foot">
+        <div class="">
+          <div class="black">
+            <p class="copyr">Copyright 2016. Todos los derechos reservados.</p>
+          </div><!--fin black-->
+        </div><!--fin col sm 12-->
+      </div><!--fin row-->
+    </footer>   
+    <script type="text/javascript" src="assets/slider/jquery.tools.min.js"></script>
+    <script type="text/javascript" src="assets/slider/main.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+    <script>
+    function initialize() {
+    // -12.119262, -77.033600
+    var myLatlng = new google.maps.LatLng(-13.521232,-71.974865);        
+    var map_canvas = document.getElementById('map_canvas');
+
+    var map_options = {
+      center: new google.maps.LatLng(-13.5212319,-71.9748655),
+      zoom: 16,
+      scrollwheel: false,
+      mapTypeId: google.maps.MapTypeId.ROADMAP,
+      mapTypeControlOptions: {
+        position: google.maps.ControlPosition.BOTTOM_CENTER
+    },
+    }
+    var map = new google.maps.Map(map_canvas, map_options)
+    var marker = new google.maps.Marker({
+      position: myLatlng,
+      map: map,
+      animation: google.maps.Animation.BOUNCE
+    });
+    marker.setIcon("assets/images/logos/logo-mapa.png");
+  }
+  google.maps.event.addDomListener(window, 'load', initialize);      
+</script>
+  </body>
+</html>

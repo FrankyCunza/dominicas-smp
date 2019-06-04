@@ -1,0 +1,460 @@
+/*!
+ * Stylesheet
+ *
+ * @author ...
+ * @version 1.0
+ */
+
+/*
+|--------------------------------------------------------------------------
+| Reset
+|--------------------------------------------------------------------------
+|
+| El reset sirve para uniformizar los estilos de elementos html
+| a traves de los diferentes navegadores, por ejemplo,
+| Internet Explorer coloca un borde azul a toda imagen que
+| este dentro de un elemento de vinculo <a>. Para quitarlo
+| "reseteamos" el elemento <img> para que no muestre ningun borde.
+|
+| Todos los estilos del reset se pueden sobreescribir luego pero
+| solo cuando el diseno lo necesite y no en un contexto general,
+| por esta razon EL RESET NO SE DEBE MODIFICAR
+|
+*/
+
+body, blockquote, dl, dd, figure, fieldset,
+h1, h2, h3, h4, h5, h6, hr, ol, p, pre,
+textarea, ul {
+	margin: 0;
+}
+button, fieldset, input, legend, ol, option,
+select, td, textarea, th, ul {
+	padding: 0;
+}
+article, aside, details, figcaption, figure, footer,
+header, main, menu, nav, section, summary {
+	display: block;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+b, strong {
+	/*font-weight: bold;*/
+}
+img {
+	border: 0;
+}
+button, input, optgroup, select, textarea {
+	color: inherit;
+	font-family: inherit;
+	font-size: inherit;
+}
+
+/*
+|--------------------------------------------------------------------------
+| Base
+|--------------------------------------------------------------------------
+|
+| Aqui se define el tamano base de la fuente, el tamano del
+| interlineado, la fuente y color principales. Tambien se definen
+| estilos generales para algunos elementos de la pagina
+| LOS VALORES SE DEBEN MODIFICAR SEGUN LAS NECESIDADES DEL PROYECTO
+|
+*/
+
+html {
+	color: #333;
+	font: 100%/1.5 sans-serif;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-size: 100%;
+}
+hr {
+	border: 0;
+	border-top: 1px solid #333;
+	height: 0;
+}
+ol, ul {
+	list-style: none;
+}
+a {
+	color: inherit;
+	text-decoration: none;
+}
+a, button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	cursor: pointer;
+}
+button[disabled],
+input[disabled] {
+	cursor: default;
+}
+blockquote, dl, figure,
+ h2, h3, h4, h5, h6, hr,  pre{
+	/*margin-bottom: 20px;*/
+}
+/*ol*/
+/*
+|--------------------------------------------------------------------------
+| Grid
+|--------------------------------------------------------------------------
+*/
+
+/* clearfix */
+.clearfix:after,
+.container:after,
+.row:after {
+	clear: both;
+	content: "";
+	display: table;
+}
+/* Este es el contenedor principal del grid,
+ * puede ser fijo ej. width: 940px
+ * o puede ser de ancho variable ej. max-width: 940px
+ * EL VALOR SE DEBE MODIFICAR SEGUN LAS NECESIDADES DEL PROYECTO */
+
+div.header{
+	
+	background-color: #FFF;	
+	
+}
+
+.container {
+	margin: 0 auto;
+	max-width: 940px;
+	background-color: #94004B;
+	padding:0 70px;
+	   position: relative; 
+}
+
+
+
+/* Aqui se corrige el espacio para poder tener columnas anidadas
+ * EL VALOR DEBE SER IGUAL AL ESPACIO HORIZONTAL ENTRE COLUMNAS
+ * PERO EN NEGATIVO */
+.row {
+	margin: 0 -10px;
+}
+/* Aqui se define el espacio horizontal que hay entre columnas
+ * EL VALOR SE DEBE MODIFICAR SEGUN LAS NECESIDADES DEL PROYECTO */
+ /*.container,*/
+[class^="col-"],
+[class*=" col-"] {
+	padding: 0 10px;
+}
+/* Aqui se definen los estilos de columna
+ * si el contenedor principal es fijo las columnas seran fijas,
+ * si es de ancho variable, tambien lo seran las columnas */
+[class^="col-"],
+[class*=" col-"] {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	float: left;
+	position: relative;
+	width: 100%;
+}
+
+/*Cuando se necesita la grilla sin paddings*/
+.row-collapse > [class^="col-"],
+.row-collapse > [class*=" col-"]  {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+/* Aqui se definen los tamanos para las 12 columnas del grid.
+ * Tambien se pueden crear tamanos de columna personalizados:
+ * Para crear un nuevo tamano de columna se debe crear una
+ * clase cuyo nombre inicie con "col-" y definir un ancho para
+ * la nueva columna ej. width: 20% */
+ @media screen and (min-width: 0px) and (max-width: 767px) {.container {padding:0 10px;} }
+ @media screen and (min-width: 0px) and (max-width: 767px) {
+.col-xs-1 { width: 8.33%; }
+.col-xs-2 { width: 16.66%; }
+.col-xs-3 { width: 25%; }
+.col-xs-4 { width: 33.33%; }
+.col-xs-5 { width: 41.66%; }
+.col-xs-6 { width: 50%; }
+.col-xs-7 { width: 58.33%; }
+.col-xs-8 { width: 66.66%; }
+.col-xs-9 { width: 75%; }
+.col-xs-10 { width: 83.33%; }
+.col-xs-11 { width: 91.66%; }
+.col-xs-12 { width: 100%; }
+
+
+ }
+@media (min-width: 768px) {
+	.col-sm-1 { width: 8.33%; }
+	.col-sm-2 { width: 16.66%; }
+	.col-sm-3 { width: 25%; }
+	.col-sm-4 { width: 33.33%; }
+	.col-sm-5 { width: 41.66%; }
+	.col-sm-6 { width: 50%; }
+	.col-sm-7 { width: 58.33%; }
+	.col-sm-8 { width: 66.66%; }
+	.col-sm-9 { width: 75%; }
+	.col-sm-10 { width: 83.33%; }
+	.col-sm-11 { width: 91.66%; }
+	.col-sm-12 { width: 100%; }
+	.col-sm-push-1 { left: 8.33%; }
+	.col-sm-push-2 { left: 16.66%; }
+	.col-sm-push-3 { left: 25%; }
+	.col-sm-push-4 { left: 33.33%; }
+	.col-sm-push-5 { left: 41.66%; }
+	.col-sm-push-6 { left: 50%; }
+	.col-sm-push-7 { left: 58.33%; }
+	.col-sm-push-8 { left: 66.66%; }
+	.col-sm-push-9 { left: 75%; }
+	.col-sm-push-10 { left: 83.33%; }
+	.col-sm-push-11 { left: 91.66%; }
+	.col-sm-push-12 { left: 100%; }
+	.col-sm-pull-1 { right: 8.33%; }
+	.col-sm-pull-2 { right: 16.66%; }
+	.col-sm-pull-3 { right: 25%; }
+	.col-sm-pull-4 { right: 33.33%; }
+	.col-sm-pull-5 { right: 41.66%; }
+	.col-sm-pull-6 { right: 50%; }
+	.col-sm-pull-7 { right: 58.33%; }
+	.col-sm-pull-8 { right: 66.66%; }
+	.col-sm-pull-9 { right: 75%; }
+	.col-sm-pull-10 { right: 83.33%; }
+	.col-sm-pull-11 { right: 91.66%; }
+	.col-sm-pull-12 { right: 100%; }
+}
+@media (min-width: 992px) {
+	.col-md-1 { width: 8.33%; }
+	.col-md-2 { width: 16.66%; }
+	.col-md-3 { width: 25%; }
+	.col-md-4 { width: 33.33%; }
+	.col-md-5 { width: 41.66%; }
+	.col-md-6 { width: 50%; }
+	.col-md-7 { width: 58.33%; }
+	.col-md-8 { width: 66.66%; }
+	.col-md-9 { width: 75%; }
+	.col-md-10 { width: 83.33%; }
+	.col-md-11 { width: 91.66%; }
+	.col-md-12 { width: 100%; }
+	.col-md-push-1 { left: 8.33%; }
+	.col-md-push-2 { left: 16.66%; }
+	.col-md-push-3 { left: 25%; }
+	.col-md-push-4 { left: 33.33%; }
+	.col-md-push-5 { left: 41.66%; }
+	.col-md-push-6 { left: 50%; }
+	.col-md-push-7 { left: 58.33%; }
+	.col-md-push-8 { left: 66.66%; }
+	.col-md-push-9 { left: 75%; }
+	.col-md-push-10 { left: 83.33%; }
+	.col-md-push-11 { left: 91.66%; }
+	.col-md-push-12 { left: 100%; }
+	.col-md-pull-1 { right: 8.33%; }
+	.col-md-pull-2 { right: 16.66%; }
+	.col-md-pull-3 { right: 25%; }
+	.col-md-pull-4 { right: 33.33%; }
+	.col-md-pull-5 { right: 41.66%; }
+	.col-md-pull-6 { right: 50%; }
+	.col-md-pull-7 { right: 58.33%; }
+	.col-md-pull-8 { right: 66.66%; }
+	.col-md-pull-9 { right: 75%; }
+	.col-md-pull-10 { right: 83.33%; }
+	.col-md-pull-11 { right: 91.66%; }
+	.col-md-pull-12 { right: 100%; }
+}
+
+
+
+/* Estas clases utilitarias sirven para ocultar elementos segun
+ * el ancho especifico del dispositivo */
+@media (max-width: 767px) {
+	.hidden-xs {
+		display: none !important;
+	}
+}
+@media (min-width: 768px) and (max-width: 991px) {
+	.hidden-sm {
+		display: none !important;
+	}
+}
+@media (min-width: 992px) {
+	.hidden-md {
+		display: none !important;
+	}
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| FONTS
+|--------------------------------------------------------------------------
+*/
+
+
+
+
+
+@font-face {
+    font-family: 'latoblack';
+    src: url('../fonts/lato-black-webfont.eot');
+    src: url('../fonts/lato-black-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/lato-black-webfont.woff2') format('woff2'),
+         url('../fonts/lato-black-webfont.woff') format('woff'),
+         url('../fonts/lato-black-webfont.ttf') format('truetype'),
+         url('../fonts/lato-black-webfont.svg#latoblack') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'latoblack_italic';
+    src: url('../fonts/lato-blackitalic-webfont.eot');
+    src: url('../fonts/lato-blackitalic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/lato-blackitalic-webfont.woff2') format('woff2'),
+         url('../fonts/lato-blackitalic-webfont.woff') format('woff'),
+         url('../fonts/lato-blackitalic-webfont.ttf') format('truetype'),
+         url('../fonts/lato-blackitalic-webfont.svg#latoblack_italic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'latobold';
+    src: url('../fonts/lato-bold-webfont.eot');
+    src: url('../fonts/lato-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/lato-bold-webfont.woff2') format('woff2'),
+         url('../fonts/lato-bold-webfont.woff') format('woff'),
+         url('../fonts/lato-bold-webfont.ttf') format('truetype'),
+         url('../fonts/lato-bold-webfont.svg#latobold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'latobold_italic';
+    src: url('../fonts/lato-bolditalic-webfont.eot');
+    src: url('../fonts/lato-bolditalic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/lato-bolditalic-webfont.woff2') format('woff2'),
+         url('../fonts/lato-bolditalic-webfont.woff') format('woff'),
+         url('../fonts/lato-bolditalic-webfont.ttf') format('truetype'),
+         url('../fonts/lato-bolditalic-webfont.svg#latobold_italic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'latohairline';
+    src: url('../fonts/lato-hairline-webfont.eot');
+    src: url('../fonts/lato-hairline-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/lato-hairline-webfont.woff2') format('woff2'),
+         url('../fonts/lato-hairline-webfont.woff') format('woff'),
+         url('../fonts/lato-hairline-webfont.ttf') format('truetype'),
+         url('../fonts/lato-hairline-webfont.svg#latohairline') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'latohairline_italic';
+    src: url('../fonts/lato-hairlineitalic-webfont.eot');
+    src: url('../fonts/lato-hairlineitalic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/lato-hairlineitalic-webfont.woff2') format('woff2'),
+         url('../fonts/lato-hairlineitalic-webfont.woff') format('woff'),
+         url('../fonts/lato-hairlineitalic-webfont.ttf') format('truetype'),
+         url('../fonts/lato-hairlineitalic-webfont.svg#latohairline_italic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'latoitalic';
+    src: url('../fonts/lato-italic-webfont.eot');
+    src: url('../fonts/lato-italic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/lato-italic-webfont.woff2') format('woff2'),
+         url('../fonts/lato-italic-webfont.woff') format('woff'),
+         url('../fonts/lato-italic-webfont.ttf') format('truetype'),
+         url('../fonts/lato-italic-webfont.svg#latoitalic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'latolight';
+    src: url('../fonts/lato-light-webfont.eot');
+    src: url('../fonts/lato-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/lato-light-webfont.woff2') format('woff2'),
+         url('../fonts/lato-light-webfont.woff') format('woff'),
+         url('../fonts/lato-light-webfont.ttf') format('truetype'),
+         url('../fonts/lato-light-webfont.svg#latolight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'latolight_italic';
+    src: url('../fonts/lato-lightitalic-webfont.eot');
+    src: url('../fonts/lato-lightitalic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/lato-lightitalic-webfont.woff2') format('woff2'),
+         url('../fonts/lato-lightitalic-webfont.woff') format('woff'),
+         url('../fonts/lato-lightitalic-webfont.ttf') format('truetype'),
+         url('../fonts/lato-lightitalic-webfont.svg#latolight_italic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'latoregular';
+    src: url('../fonts/lato-regular-webfont.eot');
+    src: url('../fonts/lato-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/lato-regular-webfont.woff2') format('woff2'),
+         url('../fonts/lato-regular-webfont.woff') format('woff'),
+         url('../fonts/lato-regular-webfont.ttf') format('truetype'),
+         url('../fonts/lato-regular-webfont.svg#latoregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+/*
+CSS
+*/
+
+
+

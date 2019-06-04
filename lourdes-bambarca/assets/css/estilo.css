@@ -1,0 +1,15 @@
+.container{background-color: #75C7D4;}
+nav.item{background-color: #75C7D4;}
+a.activ:hover{background-color: #75C7D4; color: white;}
+a.masactiv:hover{background-color: #75C7D4; color: white;}
+a.intranet:hover{background-color: #75C7D4; color: white;}
+#noticiasActividades .actividades h1{border-bottom: 1px solid #75C7D4; color:#75C7D4;}
+#noticiasActividades li{color:#75C7D4;}
+#noticiasActividades p.titulo{color: #75C7D4;}
+.activid a.masactiv{border-top: 1px solid #75C7D4;}
+#conveniosSitios div.convenios h1{color: #75C7D4; border-bottom: 1px solid #75C7D4;}
+.blog #pagination a{color: #75C7D4; border: 1px solid #75C7D4;}
+.blog #pagination a.active, .blog #pagination a:hover{background-color: #75C7D4;}
+#slider a.caption{color: #75C7D4 !important;}
+#slider a.caption:hover{background-color: #75C7D4 !important;}
+.dato i{color: #75C7D4;}

@@ -1,0 +1,15 @@
+.container{background-color: #093967;}
+nav.item{background-color: #093967;}
+a.activ:hover{background-color: #093967; color: white;}
+a.masactiv:hover{background-color: #093967; color: white;}
+a.intranet:hover{background-color: #093967; color: white;}
+#noticiasActividades .actividades h1{border-bottom: 1px solid #093967; color:#093967;}
+#noticiasActividades li{color:#093967;}
+#noticiasActividades p.titulo{color: #093967;}
+.activid a.masactiv{border-top: 1px solid #093967;}
+#conveniosSitios div.convenios h1{color: #093967; border-bottom: 1px solid #093967;}
+.blog #pagination a{color: #093967; border: 1px solid #093967;}
+.blog #pagination a.active, .blog #pagination a:hover{background-color: #093967;}
+#slider a.caption{color: #093967 !important;}
+#slider a.caption:hover{background-color: #093967 !important;}
+.dato i{color: #093967;}

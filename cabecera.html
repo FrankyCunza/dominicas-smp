@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Menú autoajustable</title>
+  <link rel="stylesheet" type="text/css" href="menu-autoajustable/estilo.css">
+  <script type="text/javascript" src="menu-autoajustablejquery.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+  var menu = $('#menu');
+  var contenedor = $('#menu-contenedor');
+  var cont_offset = contenedor.offset();
+  // Cada vez que se haga scroll en la página
+  // haremos un chequeo del estado del menú
+  // y lo vamos a alternar entre 'fixed' y 'static'.
+
+  $(window).on('scroll', function() {
+  	 //alert($(window).scrollTop());
+    if($(window).scrollTop() > cont_offset.top) {
+      menu.addClass('menu-fijo');
+    } else {
+      menu.removeClass('menu-fijo');
+    }
+  });
+});
+  </script>
+</head>
+<body>
+  <div id="page">
+
+    <div id="cabeza"></div>
+
+    <div id="menu-contenedor">
+      <ul id="menu">
+        <li><a href="#">Elemento 1</a></li>
+        <li><a href="#">Elemento 2</a></li>
+        <li><a href="#">Elemento 3</a></li>
+      </ul>
+    </div>
+
+    <div id="contenido">
+      sdgsdfsdf
+      <br>
+      <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+      addClass<br><br><br><br><br><br>
+      hhhhhhhhhhhh
+      <br><br><br><br><br>
+      <br><br><br>dgdf<br><br><br><br><br><br><br>
+      <br><br><br><br><br>xxxxxxxxxxxbr><br><br><br><br><br>
+      <br><br><br><br><br>
+      ddddd  
+    xzzzzzzzzzzzzzzzzzzz
+      <br>
+    </div>
+
+  </div>
+  
+</body>
+</html>

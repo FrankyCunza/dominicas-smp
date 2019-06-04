@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="">
+      <title>Colegios Dominicas</title>
+      <script type="text/javascript" src="assets/js/jquery-1.11.3.min.js"></script>
+      <script type="text/javascript" src="assets/js/script.js"></script>
+      <link rel="stylesheet" href="assets/css/font-awesome.css" type="text/css" media="all">
+      <link rel="stylesheet" href="assets/css/grid.css" type="text/css" media="all">
+      <link rel="stylesheet" href="assets/css/style.css" type="text/css" media="all">
+      <link href="assets/slider/style.css" rel="stylesheet" type="text/css" media="all">
+      <!--[if lt IE 9]><script src="https://cdn.jsdelivr.net/html5shiv/3.7.2/html5shiv-printshiv.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/respond/1.4.2/respond.min.js"></script><![endif]-->
+      <!--navegacion url -->
+    <link rel="stylesheet" href="assets/urlnaveg/css/style.css"> 
+    <script src="assets/urlnaveg/js/modernizr.js"></script> 
+    <script>
+      $(document).ready(function() {
+        $('.nav-toggle').click(function(){
+          //get collapse content selector
+          var collapse_content_selector = $(this).attr('href');         
+          
+          //make the collapse content to be shown or hide
+          var toggle_switch = $(this);
+          $(collapse_content_selector).toggle(function(){
+            if($(this).css('display')=='none'){
+              toggle_switch.html('Ver Menú<i class="fa fa-chevron-down" aria-hidden="true"></i>');//change the button label to be 'Show'
+            }else{
+              toggle_switch.html('Ocultar Menú<i class="fa fa-chevron-up" aria-hidden="true"></i>');//change the button label to be 'Hide'
+            }
+          });
+        });
+        
+      }); 
+    </script>
+  </head>
+  <body>
+    <div class="container header coloruno">
+      <header class="row row-collapse" >
+        <div class="col-xs-11 col-sm-7">
+          <div class="c-logo">
+            <!--<a href="index.html"><img src="assets/images/png/logo-modificado.png" class="logo" /></a>-->
+            <a href="index.html">
+              <img src="assets/images/logos/logo1.png">
+              <hgroup>
+                <h2>Colegio</h2>
+                <h1>SAN MARTIN DE PORRES</h1>
+                <h2>Cusco - Perú</h2>
+              </hgroup>
+            </a>
+          </div>
+        </div>
+        <div class="col-xs-1 col-sm-5 relative menutop">
+           <a href="#" class="menu coloruno"><i class="fa fa-bars" aria-hidden="true"></i></a>
+           <ul class="nav">
+             <li><a href="#">PP.FF</a>
+              <ul>
+                <li><a href="#">Reglamento PP.FF</a></li>
+                <li><a href="#">Comités de Aula</a></li>
+                <li><a href="#">Horarios PP.FF</a></li>
+                <li><a href="#">Comunidades</a></li>
+              </ul>
+            </li>            
+             <li><a href="#">ALUMNOS</a>
+              <ul>
+                <li><a href="#">Consejo Estudiantil</a></li>
+                <li><a href="#">Reglamento del Estudiante</a></li>
+                <li><a href="#">Horarios</a></li>
+                <li><a href="#">Exalumnos</a></li>
+              </ul>
+             </li>
+             <li><a href="#">INTRANET</a></li>
+             <li><a href="#">AULA VIRTUAL</a></li>
+           </ul>
+        </div>   
+        <section class="row"><!--inicio de menu dos-->
+          <div class="enlacmovil movil">
+            <ul>
+              <li><a href="nosotros.html" class="nosm">NOSOTROS</a></li>
+              <li><a href="niveles.html" class="nivm">NIVELES</a></li>
+              <li><a href="#" class="acam">ÁREAS ACADÉMICAS</a></li>
+              <li><a href="#" class="extm">ÁREAS DE EXTENSIÓN</a></li>
+              <li><a href="recursos.html" class="recm">RECURSOS </a></li>
+              <li><a href="agenda.html" class="agem">AGENDA </a></li>
+              <li><a href="talleres.html" class="talm">TALLERES </a></li>
+              <li><a href="#" class="nivm">COLEGIOS </a></li>
+              <li><a href="noticias.html" class="recm">NOTICIAS </a></li>
+              <li><a href="contacto.html" class="vacm">CONTACTO</a></li>
+            </ul>
+          </div>
+        </section><!--fin de menu dos-->     
+      </header>
+    </div>
+    <div class="container" id="menu-contenedor">
+      <div id="menu" class="row row-collapse">
+        <nav class="col-sm-12 item"> 
+          <ul class="nav">  
+            <li class="btn btn1"><a href="nosotros.html" class="">NOSOTROS</a>
+                <ul>
+                  <li><a href="nosotros.html" class="men">Presentación</a></li>
+                  <li><a href="historia.html" class="men">Historia<i class="fa fa-caret-right fa-lg"  ></i></a>
+                    <ul  class="historia" >
+                      <li >                        
+                        <span ><a href="historia.html#introduccion" class="men">Introducción</a></span>
+                        <span ><a href="historia.html#directoras" class="men">Directoras</a></span>
+                      </li>                                
+                    </ul> 
+                  </li>
+                  <li><a href="misionyvision.html" class="men">Misión y Visión</a></li>  
+                  <li><a href="pastoral.html" class="men">Pastoral<i class="fa fa-caret-right fa-lg"></i></a>
+                    <ul class="pastoral">
+                      <li>
+                        <span ><a href="pastoral.html#objgeneral" class="men">Objetivo General</a></span>
+                        <span ><a href="pastoral.html#objespecificos" class="men">Objetivos Específicos</a></span>
+                        <span ><a href="pastoral.html#catequesis" class="men">Programa de Catequésis</a></span>
+                        <span ><a href="pastoral.html#espiritualidad" class="men">Programa de Espiritualidad Familiar</a></span>
+                        <span ><a href="pastoral.html#voluntariado" class="men">Voluntariado Dominicano</a></span>
+                      </li>                                
+                    </ul>
+                  </li>                        
+               </ul>
+            </li>
+            <li class="btn btn2"><a href="niveles.html" class="">NIVELES</a>
+              <ul>
+                <li><a href="niveles.html#pedagogica" class="men">Propuesta Pedagógica<i class="fa fa-caret-right fa-lg"></i></a>
+                  <ul class="pedagogica">
+                    <li>
+                      <span ><a href="niveles.html#primario" class="men">Nivel Primario</a></span>
+                      <span ><a href="niveles.html#secundario" class="men">Nivel Secundario</a></span>
+                      <span ><a href="niveles.html#plan" class="men">Plan Lector</a></span>                                
+                    </li>                                
+                  </ul> 
+                </li>
+              </ul>    
+            </li>
+            <li class="btn btn3 flexdos"><a href="#" class="btn3in">ÁREAS ACADÉMICAS</a></li>
+            <li class="btn btn4 flexdos"><a href="#" class="btn4in">ÁREAS DE EXTENSIÓN</a></li>
+            <li class="btn btn5"><a href="recursos.html" class="">RECURSOS </a>
+              <ul>
+                <li ><a href="recursos.html#libros" class="men">Documentos</a></li>
+                <li ><a href="recursos-fotos.html" class="men">Fotos<i class="fa fa-caret-right fa-lg" ></i></a>
+                  <ul class="fotos">
+                    <li>
+                      <span ><a href="recursos-fotos.html#campeonato" class="men">Campeonato 2016</a></span>
+                      <span ><a href="recursos-fotos.html#graduacion" class="men">Graduación 2016</a></span>
+                    </li>                                
+                  </ul> 
+                </li>
+                <li ><a href="recursos-videos.html" class="men">Videos</a></li>
+              </ul>        
+            </li> 
+            <li class="btn btn6"><a href="agenda.html" class="">AGENDA </a></li>
+            <li class="btn btn7"><a href="talleres.html" class="">TALLERES</a></li>
+            <li class="btn btn8"><a href="contacto.html" class="">CONTACTO</a></li>
+          </ul>
+        </nav>
+      </div>  
+    </div>
+    <div id="main" class="container" >        
+      <section class="row">
+        <div class="enlacmovil movil">
+          <ul>
+            <li><a href="nosotros.html" class="nosm">NOSOTROS</a></li>
+            <li><a href="niveles.html" class="nivm">NIVELES</a></li>
+            <li><a href="#" class="acam">ÁREAS ACADÉMICAS</a></li>
+            <li><a href="#" class="extm">ÁREAS DE EXTENSIÓN</a></li>
+            <li><a href="recursos.html" class="recm">RECURSOS </a></li>
+            <li><a href="agenda.html" class="agem">AGENDA </a></li>
+            <li><a href="talleres.html" class="talm">TALLERES </a></li>
+            <li><a href="#" class="nivm">COLEGIOS </a></li>
+            <li><a href="noticias.html" class="recm">NOTICIAS </a></li>
+            <li><a href="contacto.html" class="vacm">CONTACTO</a></li>
+          </ul>
+        </div>
+        <!-- enlaces redes -->
+        <div class="social">
+          <a href="https://www.facebook.com/sanmartin.cusco" target="_blank" title="facebook" class="fac">
+              <i class="fa fa-facebook fa-2x" aria-hidden="true"></i>
+          </a>
+          <a href="#" title="twiter" class="twi">
+              <i class="fa fa-twitter fa-2x" aria-hidden="true"></i>
+          </a>
+          <a href="#" title="youtube">
+              <i class="fa fa-youtube-play fa-2x" aria-hidden="true"></i>
+          </a>
+        </div>
+        <!-- -->
+      </section>
+      <div class="nosotros talleres interna row">
+        <nav>
+          <ol class="cd-breadcrumb triangle">
+            <li ><a href="#0" >Talleres</a></li>
+            <li ><a href="#0" >Talleres Artísticos</a></li>
+            <li class="current"><em>Introducción</em></li>
+          </ol>
+        </nav>
+        <div class="col-sm-3">
+           <div class="menu-interno">
+              <div>
+                <button href="#collapse1" class="nav-toggle coloruno">Ver Menú<i class="fa fa-chevron-down" aria-hidden="true"></i></button>
+              </div>
+              <ul id="collapse1">
+                 <li class="group active"><a href="#artisticos">TALLERES ARTÍSTICOS<i class="fa fa-caret-right fa-lg"></i></a></li>
+                 <li class="child"><a href="#musica">Música</a></li>
+                 <li class="child"><a href="#teatro">Teatro</a></li>
+                 <li class="child"><a href="#danza">Danza</a></li>
+                 <li class="group"><a href="#voley">TALLERES DEPORTIVOS</a></li>
+                 <li class="child"><a href="#voley">Voley</a></li>
+                 <li class="child"><a href="#basquet">Basquet</a></li>
+                 <li class="child"><a href="#tenis">Tenis de Mesa</a></li>
+                 <li class="child"><a href="#ajedrez">Ajedrez</a></li>
+                 <li class="child"><a href="#karate">Karate</a></li>
+              </ul>
+           </div>
+        </div>
+        <div class="col-sm-9">
+          <div class="row">                
+            <div class="col-sm-12">
+               <h2 id="artisticos">Introducción</h2>
+               <p>Los talleres artísticos y deportivos se desarrollan dentro de nuestro plan de estudios en las áreas de educación física y de arte en el nivel primario y secundario.<br><br>
+               A parte cada taller se desarrolla también en horas fuera del horario de clase en forma libre de acuerdo a la elección de cada alumna, formando así nuestras selecciones deportivas y equipos de arte que nos representan en diferentes eventos deportivos y artísticos.<p>
+            </div>
+            <div id="musica" class="col-sm-12 taller-sub">
+               <h3>Música<br><span>Taller Artístico</span></h3>
+            </div>
+            <div class="col-sm-6 col-xs-12 ">
+               <p>Desarrolla la sensibilidad y la memoria,  ayuda a expresar sus sentimientos, sensibilizar a las niñas involucrando  todos los sentidos. La música en la niña no solo estimula el oído,  sino también proporciona una estimulación visual y táctil.Ayuda a organizar y sincronizar el movimiento.<br><br>
+               También estimula la imaginación y la capacidad creativa. Desarrolla el sistema  de expresión musical, así como el sentido estético. La música desarrolla la  capacidad de concentración.
+               <a class="more"><span>Seguir leyendo<i class="fa fa-caret-right fa-lg"></i></span></a></p>
+               <p class="taller-more">Está íntimamente relacionada con la adquisición de las matemáticas, desarrolla  la memoria y el sentido del  orden.<br><br>Es por ello, que nuestro Colegio, apuesta por este taller debido a todos  los beneficios que se reflejan en el aprendizaje de las alumnas y porque  complementa a nuestra propuesta pedagógica de la desarrollo de las  inteligencias múltiples en el aula.<br><br>Entre los talleres de Música tenemos:<br>Taller de coro.<br>Taller de banda<br>Taller de música folclórica
+               <a class="less"><span>Leer menos<i class="fa fa-caret-right fa-lg"></i></span></a></p>
+            </div>
+            <div class="col-sm-6 col-xs-12 ">
+               <img src="assets/images/jpg/talleres3.jpg">
+            </div>
+            <div id="teatro" class="col-sm-12 taller-sub">
+               <h3>Teatro<br><span>Taller Artístico</span></h3>
+            </div>
+            <div class="col-sm-6">
+               <p>San Martín propone este taller ya que apuesta  por una educación como elemento de búsqueda y conocimiento para mejorar  la calidad humana; dentro de ella, un método lúdico que se fundamenta en el  juego, el afecto y la creatividad.<br><br>Nuestra institución ha desarrollado a través de su taller permanente de teatro  una propuesta pedagógica propia cuyo objetivo principal es lograr  el desarrollo integral de las niñas fortaleciendo la autoestima, habilidades  artísticas, sociales, trabajar en valores así como desarrollar su atención y  concentración.
+               <a class="more"><span>Seguir leyendo<i class="fa fa-caret-right fa-lg"></i></span></a></p>
+               <p class="taller-more">Es por ello, que nuestra metodología incluye el juego, el afecto, la  creatividad y un acompañamiento psicológico permanente.<br><br>En el teatro el hecho de actuar movilizan las más profundas  emociones y fantasías generando un valor que le permite enfrentarse  consigo misma.<br><br>Al finalizar el año, las alumnas que participan en este taller realizan sus  presentaciones que sirven para desarrollar en ellas la capacidad de enfrentarse  al público y mostrar el resultado de su trabajo.
+               <a class="less"><span>Leer menos<i class="fa fa-caret-right fa-lg"></i></span></a></p>
+            </div>
+            <div class="col-sm-6">
+               <img src="assets/images/jpg/talleres2.jpg">
+            </div>
+            <div id="danza" class="col-sm-12 taller-sub">
+               <h3>Danza<br><span>Taller Artístico</span></h3>
+            </div>
+            <div class="col-sm-6">
+               <p>Con el taller de danza folclórica se  pretende, además de sensibilizar a las alumnas y desarrollar sus capacidades y  habilidades dancísticas, fomentar actitudes que le permitan apreciar, valorar y  disfrutar la danza y algunas otras manifestaciones relacionadas con la misma, y  de esta manera, contribuir a la formación integral del educando de acuerdo con  el perfil de la alumna sanmartiniana.<br><br>Este taller permitirá que la alumna conozca de manera general los aspectos  teórico-prácticos mínimos indispensables para la comprensión y ejecución de  algunos géneros dancísticos que se practican en el país en general, y  particularmente en nuestra localidad cusqueña.</p>
+            </div>
+            <div class="col-sm-6">
+               <img src="assets/images/jpg/talleres4.jpg">
+            </div>
+            <div id="voley" class="col-sm-12 taller-sub">
+               <h3>Voley<br><span>Taller Deportivo</span></h3>
+            </div>
+            <div class="col-sm-6">
+               <p>Busca que la estudiante adquiera a  través de actividades específicas los fundamentos Básicos del Voleibol que le  permitan desarrollar capacidades físicas y valores que como responsabilidad,  perseverancia, optimismo, respeto, etc., de esta forma estará preparada para  jugar y competir sanamente dentro o fuera de la selección de nuestro colegio.</p>
+            </div>
+            <div class="col-sm-6">
+               <img src="assets/images/jpg/talleres1.jpg">
+            </div>
+            <div id="basquet" class="col-sm-12 taller-sub">
+               <h3>Basquet<br><span>Taller Deportivo</span></h3>
+            </div>
+            <div class="col-sm-6">
+               <p>Uno de los fines principales del taller es  lograr el conocimiento y aprendizaje del básquet a un nivel de competencia, de  tal modo que las alumnas que hayan participado en el programa cuenten con el  conocimiento suficiente para poder integrar la selección de básquet del  colegio.</p>
+            </div>
+            <div class="col-sm-6">
+               <img src="assets/images/jpg/talleres1.jpg">
+            </div>
+            <div id="tenis" class="col-sm-12 taller-sub">
+               <h3>Tenis de Mesa<br><span>Taller Deportivo</span></h3>
+            </div>
+            <div class="col-sm-6">
+               <p>El deporte del Tenis de Mesa despierta un interés particular en nuestras  niñas y adolescentes debido a que utiliza implementos que se ajustan  perfectamente a ellas y que tiene un sistema de puntaje muy fácil y emocionante  (punto a punto), permitiendo que cualquiera pueda aprender a jugar y ganar en  cualquier momento haciendo puntos rápidos o efectos sensacionales que son el  deleite de los chicos.
+               <a class="more"><span>Seguir leyendo<i class="fa fa-caret-right fa-lg"></i></span></a></p>
+               <p class="taller-more">Los beneficios de la práctica de este deporte en las alumnas son muchos. En  el aspecto físico, un buen entrenamiento de Tenis de Mesa permite utilizar casi  todos los músculos del cuerpo, permitiendo así que uno pueda ejercitarse de muy  buena forma. A las niñas pequeñas les ayuda en su desarrollo psicomotriz porque  para jugar tenis de mesa hay que ser muy coordinadas, las técnicas básicas que  se aprenden exigen un movimiento armonioso y coordinado de piernas, brazos,  cintura y tronco. En las más grandecitas estimula el crecimiento.<br><br>El aspecto psicológico también se ve beneficiado pues las niñas aprenden a  tomar decisiones rápidas, los hace más despiertas, ya que en este deporte  decides en milésimas de segundos que jugada quieres hacer o cómo tienes que  reaccionar ante un ataque rápido o con mucho efecto.<br><br>Es un deporte emotivo en donde un punto puede decidir tu triunfo o tu derrota,  es así que una tiene que tomar actitudes especiales dentro del juego, ya sea  ser algo agresiva y arriesgar yendo al ataque o ser paciente, calculadora y  esperar a que el rival falle. Cabe mencionar que en este deporte puedes estar  en la “cima” en un segundo y al siguiente segundo estar en el fondo, por lo que  saber controlar y asimilar estas situaciones ayuda a mejorar el carácter de una  persona en formación.<br><br>Las ayuda a desarrollar su concentración. Está  demostrado que los buenos tenimesistas destacan intelectualmente porque desde  muy pequeños han aprendido a concentrarse trazándose objetivos muy claros. Para  poder jugar este deporte hay que estar muy atenta y ser observadora.
+               <a class="less"><span>Leer menos<i class="fa fa-caret-right fa-lg"></i></span></a></p>
+            </div>
+            <div class="col-sm-6">
+               <img src="assets/images/jpg/talleres1.jpg">
+            </div>
+            <div id="ajedrez" class="col-sm-12 taller-sub">
+               <h3>Ajedrez<br><span>Taller Deportivo</span></h3>
+            </div>
+            <div class="col-sm-6">
+               <p>El ajedrez es un juego milenario que simboliza a la vida, su organización y la resolución de sus conflictos, que tiene adeptos organizados en 150 países y que sirve a la educación para modelar la personalidad del niño y realzar, descubrir o afianzar capacidades intelectuales como el cálculo, el pensamiento lógico, el pensamiento estratégico, la creatividad o la capacidad de previsión o prospectiva, entre otras.
+               <a class="more"><span>Seguir leyendo<i class="fa fa-caret-right fa-lg"></i></span></a></p>
+               <p class="taller-more">El ajedrez organizado se define como un JUEGO, un DEPORTE, un ARTE y una CIENCIA. Como juego, posibilita una actividad donde el que aprende prueba sus habilidades estratégicas y tácticas para resolver problemas.<br><br>CON EL AJEDREZ SE ESTUDIA LA PRODUCCION INTELECTUAL: la memoria, la deducción lógica, el pensamiento estratégico, la toma de decisiones, el pensamiento creativo, la prospección, el planeamiento, la evaluación sistemática, etc.<br><br>Por todo el ello el colegio ha asumido el taller de ajedrez de 1º a 4º grado dentro del área de Matemática y en la Polidocencia y en el nivel secundario a través del taller de ajedrez en el área de Educación Física.
+               <a class="less"><span>Leer menos<i class="fa fa-caret-right fa-lg"></i></span></a></p>
+            </div>
+            <div class="col-sm-6">
+               <img src="assets/images/jpg/talleres5.jpg">
+            </div>
+            <div id="karate" class="col-sm-12 taller-sub">
+               <h3>Karate<br><span>Taller Deportivo</span></h3>
+            </div>
+            <div class="col-sm-6">
+               <p>El objetivo del taller es el mejoramiento físico y  mental, preparando a las estudiantes para la vida y la defensa de la paz.<br><br>Mediante el entrenamiento se mejora de la actividad fisiológica de forma  sistemática mejorando y perfeccionando las capacidades físicas necesarias,  los hábitos motores, la técnica y los fundamentos de la táctica, paralelo a la  elevación de las cualidades psíquicas del practicante.
+               <a class="more"><span>Seguir leyendo<i class="fa fa-caret-right fa-lg"></i></span></a></p>
+               <p class="taller-more">Todas las técnicas de las artes marciales están respaldadas por los  mismos principios que rigen al Universo (gravitación, equilibrio, movimientos  circulares y espirales, fuerza centrípeta y centrífuga, acción y reacción, ritmo, movimientos ondulatorios, etc.) Fuerza, flexibilidad, elasticidad, rapidez y resistencia son algunas de las capacidades físicas que más se  benefician en el entrenamiento de las artes marciales.<br><br>La preparación mental la guía por el camino de la serenidad, la humildad, el respeto a sí misma desarrollado un sentido interior de responsabilidad en el  uso de sus conocimientos.
+               <a class="less"><span>Leer menos<i class="fa fa-caret-right fa-lg"></i></span></a></p>
+            </div>
+            <div class="col-sm-6">
+               <img src="assets/images/jpg/talleres5.jpg">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="mapas" class="row ">
+        <div class="col-sm-4 lugar"  >
+          <div class="logomap" >
+            <img src="assets/images/logos/logo1.png" />
+          </div>
+          <p class="martin">COLEGIO SAN MARTIN DE PORRES</p>
+          <p class="domin">Cusco - Perú</p>
+          <p class="provin">Colegio Dominico</p>
+          <p class="dato"><i class="fa fa-home fa-lg colorunotxt" aria-hidden="true"></i>Calle Ahuacpinta 600, Cusco</p>
+          <p class="dato"><i class="fa fa-phone fa-lg colorunotxt" aria-hidden="true"></i>+51084225484</p>
+          <p class="dato" title="Contacto@sanmartincusco.edu.pe"><i class="fa fa-envelope fa-lg colorunotxt" aria-hidden="true"></i><a href="mailto:Contacto@sanmartincusco.edu.pe">Contacto@sanmartincusco.edu.pe</a></p>
+          <p class="sociales">
+            <a href="https://www.facebook.com/sanmartin.cusco" target="_blank" ><i class="fa fa-facebook fa-lg" aria-hidden="true"></i></a>
+            <a href="#"><i class="fa fa-twitter fa-lg" aria-hidden="true"></i></a>
+            <a href="#"><i class="fa fa-youtube-play fa-lg" aria-hidden="true"></i></a>
+          </p>
+        </div>          
+        <div class="col-sm-8 goomap">
+          <div id="map_canvas"></div>
+          <!--<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1939.6130481712073!2d-71.9749124408717!3d-13.521711737559928!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x916dd60ac7bdd5a1%3A0xee3c6d361fdc3721!2sSan+Martin+de+Porres!5e0!3m2!1ses-419!2spe!4v1460582565691" width="650" height="263" frameborder="0" style="border:0" allowfullscreen></iframe>-->
+        </div>        
+      </div>
+    </div>     
+    <footer class=" container foot">
+      <!--<div class="row">
+        <div class="col-sm-12 sitios">
+          <h1> SITIOS DE INTERES</h1>
+          <ul>
+            <li><a href="http://www.minedu.gob.pe" target="_blank" class="interes">Ministerio de Educación</a></li>
+            <li><a href="http://www.ugelcusco.com" target="_blank"  class="interes">UGEL Cusco</a></li>
+            <li><a href="http://siagie.minedu.gob.pe/inicio/" target="_blank" class="interes">SIAGIE</a></li>
+            <li><a href="http://www.dominicasperu.com.pe/" target="_blank" class="interes">Hermanas DIC en el Perú</a></li>
+            <li><a href="http://www.icdominicas.org/" target="_blank" class="interes">Hermanas DIC</a></li>
+          </ul>
+        </div>
+      </div>--><!---->
+      <div class=" container-fluid row foot">
+        <div class="">
+          <div class="black">
+            <p class="copyr">Copyright 2016. Todos los derechos reservados.</p>
+          </div><!--fin black-->
+        </div><!--fin col sm 12-->
+      </div><!--fin row-->
+    </footer>  
+    <script type="text/javascript" src="assets/slider/jquery.tools.min.js"></script>
+    <script type="text/javascript" src="assets/slider/main.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+    <script>
+    function initialize() {
+    // -12.119262, -77.033600
+    var myLatlng = new google.maps.LatLng(-13.521232,-71.974865);        
+    var map_canvas = document.getElementById('map_canvas');
+
+    var map_options = {
+      center: new google.maps.LatLng(-13.5212319,-71.9748655),
+      zoom: 16,
+      scrollwheel: false,
+      mapTypeId: google.maps.MapTypeId.ROADMAP,
+      mapTypeControlOptions: {
+        position: google.maps.ControlPosition.BOTTOM_CENTER
+    },
+    }
+    var map = new google.maps.Map(map_canvas, map_options)
+    var marker = new google.maps.Marker({
+      position: myLatlng,
+      map: map,
+      animation: google.maps.Animation.BOUNCE
+    });
+    marker.setIcon("assets/images/logos/logo-mapa.png");
+  }
+  google.maps.event.addDomListener(window, 'load', initialize);      
+</script>
+  </body>
+</html>

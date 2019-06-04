@@ -1,0 +1,27 @@
+.text3 {
+    color: #555446;
+    font-family: "prelo_book","Trebuchet MS",Arial,Helvetica,sans-serif !important;
+    font-size: 12px;
+    line-height: 16px;
+}
+.bordecito td {
+    border:1px solid #aaa;
+    text-align:center;
+    padding:4px;
+}
+
+#link_plano {
+    color: #ec3136;
+    display: block;
+    font-family: "prelo_book","Trebuchet MS",Arial,Helvetica,sans-serif !important;
+    font-size: 11px;
+    height: 13px;
+    margin-top: -5px;
+    text-align: center;
+    text-decoration: none;
+    width: 53px;
+}
+
+#link_plano:hover {
+    text-decoration:underline;
+}
